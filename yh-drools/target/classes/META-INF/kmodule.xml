@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://jboss.org/kie/6.0.0/kmodule">
+
+
+	<!--<kbase name="rules" packages="rules">
+		<ksession name="ksession-rules" />
+	</kbase>
+	-->
+    <kbase name="call1-order" packages="drools" >
+		<ksession name="call1-order-session" type="stateful" />
+	</kbase>
+
+	<kbase name="call2-point" packages="drools">
+		<ksession name="call1-point-session" />
+	</kbase>
+</kmodule>

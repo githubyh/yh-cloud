@@ -1,0 +1,60 @@
+
+package com.yh.drools
+
+
+import com.yh.drools.domain.Order;
+
+
+
+rule "First Rule"
+ salience 1
+
+    when
+
+        $order:Order(sumprice>30,sumprice<=50);
+    then
+
+        $order.setDiscountPercent(98);
+        System.out.println("update suprice sumprice>30,sumprice<=50");
+
+end
+
+rule "Second Rule"
+ salience 3
+no-loop true
+
+    when
+
+        order:Order(sumprice>50,sumprice<=200);
+    then
+
+        order.setDiscountPercent(95);
+        System.out.println("update suprice sumprice>50,sumprice<=200");
+        order.setSumprice(159);
+        update(order);
+end
+
+rule "third Rule"
+ salience 4
+    when
+
+        order:Order(sumprice>200);
+    then
+
+        order.setDiscountPercent(90);
+        System.out.println("update suprice sumprice>200");
+end
+
+
+rule "four Rule"
+ salience 5
+ no-loop true
+    when
+
+        order:Order(sumprice==159);
+    then
+
+        order.setDiscountPercent(10);
+        //order.setSumprice(50);
+        System.out.println("update suprice ==159");
+end
