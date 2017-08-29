@@ -20,6 +20,7 @@
         <module>yh-test</module>
         <module>yh-drools</module>
         <module>yh-jdk-base</module>
+        <module>yh-tools</module>
     </modules>
 
 
