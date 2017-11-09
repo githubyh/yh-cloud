@@ -21,6 +21,7 @@
         <module>yh-drools</module>
         <module>yh-jdk-base</module>
         <module>yh-tools</module>
+        <module>yh-swagger</module>
     </modules>
 
 
