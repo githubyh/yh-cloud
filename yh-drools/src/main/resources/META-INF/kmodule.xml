@@ -8,10 +8,10 @@
 	</kbase>
 	-->
     <kbase name="call1-order" packages="drools" >
-		<ksession name="call1-order-session" type="stateful" />
+		<ksession name="call1-order-session"   type="stateful" />
 	</kbase>
 
-	<kbase name="call2-point" packages="drools">
-		<ksession name="call1-point-session" />
+	<kbase name="call2-point"  packages="drools">
+		<ksession  name="call1-point-session" />
 	</kbase>
 </kmodule>

@@ -22,6 +22,9 @@
         <module>yh-jdk-base</module>
         <module>yh-tools</module>
         <module>yh-swagger</module>
+        <module>yh-metrics</module>
+        <module>yh-pinpoint</module>
+        <module>yh-guava</module>
     </modules>
 
 

@@ -17,7 +17,7 @@ public class CountDownLatchTest {
         System.out.println("==========================>\n分组：" + groupName + "比赛开始：");
         for(int i = 0 ; i < GROUP_SIZE ; i++) {
             new Thread(String.valueOf(i)) {
-                public void run() {
+                public void run()  {
                     System.out.println("我是线程组：【" + groupName + "】,第：" + this.getName() + " 号线程,我已经准备就绪！");
                     try {
                         start_count_down.await();//等待开始指令发出即：start_count_down.countDown();

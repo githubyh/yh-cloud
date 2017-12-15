@@ -4,6 +4,7 @@ import com.yh.drools.Base;
 import com.yh.drools.RuleEngine;
 import com.yh.drools.RuleImpl;
 import com.yh.drools.domain.Order;
+import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,12 +12,18 @@ public class DroolsUtil {
     private static final Logger LOGGER = LoggerFactory.getLogger(DroolsUtil.class);
 
     // drl规则名称
-    private String kSessionName = "call1-order-session";
+    private String  kSessionName ;
+
+    private String default_kSessionName = "call1-order-session";
 
 
     public DroolsUtil(String kSessionName) {
-        this.kSessionName = kSessionName;
-        pointRuleEngine = new RuleImpl(kSessionName);
+        if(StringUtils.isBlank(kSessionName)){
+            this.kSessionName = default_kSessionName;
+        }else{
+            this.kSessionName = kSessionName;
+        }
+        pointRuleEngine = new RuleImpl(this.kSessionName);
         pointRuleEngine.initEngine();
     }
 

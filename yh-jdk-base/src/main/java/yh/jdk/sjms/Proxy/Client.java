@@ -6,7 +6,11 @@ package yh.jdk.sjms.Proxy;
 public class Client {
 
     public static void main(String[] args){
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         Subject subject = (Subject)new MyInvocationHandler(new SubjectImpl()).getProxy();
         subject.print();
+
+
+
     }
 }

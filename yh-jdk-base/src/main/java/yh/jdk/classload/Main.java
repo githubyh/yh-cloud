@@ -36,10 +36,14 @@ public class Main {
     };
 
     public static void main(String args[]) throws Exception {
+        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles","true");
         MyClassLoader classLoader = new MyClassLoader("D:/test");
         Class clazz = classLoader.loadClass("yh.jdk.classload.Test");
         Object obj = clazz.newInstance();
         Method helloMethod = clazz.getDeclaredMethod("hello", null);
         helloMethod.invoke(obj, null);
+        System.out.println(obj.getClass()  == clazz );
+        System.out.println(obj.getClass().getName()+"=="+clazz.getName() );
+
     }
 }

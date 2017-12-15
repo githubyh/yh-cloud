@@ -1,5 +1,7 @@
 package yh.jdk.jvm;
 
+import org.springframework.util.Assert;
+
 /**
  *
  * vm： -verbose:gc -Xms20m -Xmx20m -Xmn10m -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:permSize=50m
@@ -21,6 +23,8 @@ public class TestGC {
 //        a5 = new byte[1 * _1MB];
         a4 = new byte[7 * _1MB]; //出现一次Minor GC
 
-
+        Assert.notNull(null,"busnull");
+        Assert.isTrue(2==2,"成功");
+        System.out.println(234);
     }
 }

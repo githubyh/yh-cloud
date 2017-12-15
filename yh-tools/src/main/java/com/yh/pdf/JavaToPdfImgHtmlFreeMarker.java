@@ -43,7 +43,7 @@ public class JavaToPdfImgHtmlFreeMarker {
     }
   
   
-     public static void main(String[] args) throws IOException, DocumentException, com.lowagie.text.DocumentException {
+     /*public static void main(String[] args) throws IOException, DocumentException, com.lowagie.text.DocumentException {
         Map<String,Object> data = new HashMap();
         data.put("name","鲁家宁");
   
@@ -55,7 +55,7 @@ public class JavaToPdfImgHtmlFreeMarker {
         fileStream.write(imgSteam.toByteArray());
         fileStream.close();
   
-    }
+    }*/
   
   
     /**
@@ -124,7 +124,7 @@ public class JavaToPdfImgHtmlFreeMarker {
      * @param scaling 清晰度
      * @param pageNum 页数
      */
-     public static ByteArrayOutputStream pdfToImg(byte[] bytes, float scaling, int pageNum,String formatName) {
+     /*public static ByteArrayOutputStream pdfToImg(byte[] bytes, float scaling, int pageNum,String formatName) {
         //推荐的方法打开PdfDecoder
         PdfDecoder pdfDecoder = new PdfDecoder(true);
         FontMappings.setFontReplacements();
@@ -145,5 +145,5 @@ public class JavaToPdfImgHtmlFreeMarker {
         }
   
         return out;
-    }
+    }*/
 }

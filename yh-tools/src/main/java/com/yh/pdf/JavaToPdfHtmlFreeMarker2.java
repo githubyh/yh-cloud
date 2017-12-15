@@ -19,7 +19,7 @@ public class JavaToPdfHtmlFreeMarker2 {
     private static final String DEST = JavaToPdf.PATH + "/target/HelloWorld_CN_HTML_FREEMARKER_FS.pdf";
     private static final String HTML =  "template_freemarker_fs.html";
     private static final String FONT = JavaToPdf.TEMPLATE_PATH +"simhei.ttf";
-    private static final String LOGO_PATH = "file://"+JavaToPdf.TEMPLATE_PATH ;
+    private static final String LOGO_PATH = "file://d:/"  ;
   
     private static Configuration freemarkerCfg = null;
   
