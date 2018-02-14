@@ -17,13 +17,13 @@ public class StringTest {
 
     public static void main(String args[]){
         StringTest tester = new StringTest();
-        tester.testJoiner();
+//        tester.testJoiner();
 
         tester.testSplitter();
 
-        tester.testCharMatcher();
+//        tester.testCharMatcher();
 
-        tester.testCaseFormat();
+//        tester.testCaseFormat();
     }
 
     private void testJoiner(){
