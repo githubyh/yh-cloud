@@ -12,5 +12,13 @@ Java ms通关要点（二）核心篇 http://mp.weixin.qq.com/s/jZog0sllIzCeMgSM
 开发者ms指南 http://mp.weixin.qq.com/s/4IvJsMkNuo6QqYqhRPQFGA
 Javams宝典Beta5.0 （带答案）https://www.jianshu.com/p/fb7d48083e5e?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
 ms详解：  占小狼 匠心零度http://mp.weixin.qq.com/s/Lp2OJRgp_qIOmSb0BdEBxw
+每日ms：https://mp.weixin.qq.com/s/tXC5gADYZpI0p5TOww1srw
+https://mp.weixin.qq.com/s/IikOABCxvZQwDmsVrcpbgA
+ms通关宝典：http://mp.weixin.qq.com/s/mEjox_snApxbxwSGklpkxQ
 
 
+一叶知秋：https://muyinchen.github.io/
+Hoseejava源码：https://my.oschina.net/hosee/blog?sort=hot&temp=1519892135397
+书海陶然同步异步讲解：https://www.jianshu.com/p/aed6067eeac9
+基础：http://www.cnblogs.com/GarfieldEr007/
+分布式事务-阿里：https://www.jianshu.com/u/c9668ae2b661

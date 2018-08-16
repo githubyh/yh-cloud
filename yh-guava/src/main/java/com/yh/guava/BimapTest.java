@@ -13,7 +13,7 @@ public class BimapTest {
         BiMap<Integer, String> empIDNameMap = HashBiMap.create();
 
         empIDNameMap.put(new Integer(100), "Mahesh");
-        empIDNameMap.put(new Integer(101), "Mahesh2");
+        empIDNameMap.put(new Integer(101), "Mahesh");
         empIDNameMap.put(new Integer(102), "Sohan");
         empIDNameMap.put(new Integer(103), "Ramesh");
 

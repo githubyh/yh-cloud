@@ -1,5 +1,7 @@
 
 密码模式 http://www.cnblogs.com/memoryXudy/p/7805178.html
+代码：https://gitee.com/xdymemory00/Security-OAuth2-MiMaMoShi.git
+
 
 oauth全家桶: https://github.com/newnil/oauth2-family-barrel
 

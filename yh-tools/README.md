@@ -49,3 +49,6 @@ https://github.com/shuzheng/zheng
 https://github.com/justjavac/awesome-wechat-weapp
 
 
+
+ApplicationContext context = WebApplicationContextUtils.getWebApplicationContext(servletContextEvent.getServletContext());
+userService = context.getBean(UserService.class);

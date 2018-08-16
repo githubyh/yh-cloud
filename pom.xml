@@ -25,6 +25,7 @@
         <module>yh-rpc</module>
         <module>yh-oauth</module>
         <module>yh-search</module>
+        <module>yh-easypoi</module>
     </modules>
 
 

@@ -81,6 +81,17 @@
             <artifactId>jpedal-lgpl</artifactId>
             <version>4.74b27</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.8</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.pdfbox</groupId>
+            <artifactId>pdfbox</artifactId>
+            <version>1.8.9</version>
+        </dependency>
     </dependencies>
 
 </project>

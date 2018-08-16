@@ -1,33 +1,27 @@
 package com.yh.pdf;
 
-import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.BaseFont;
+import com.lowagie.text.DocumentException;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
-
+import org.jpedal.PdfDecoder;
+import org.jpedal.fonts.FontMappings;
 import org.xhtmlrenderer.pdf.ITextFontResolver;
 import org.xhtmlrenderer.pdf.ITextRenderer;
+
+import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.StringWriter;
-import java.io.Writer;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
   
-import javax.imageio.ImageIO;
-  
-/**
- * Created by lujianing on 2017/5/7.
- */
+
 public class JavaToPdfImgHtmlFreeMarker {
 
     private static final String DEST = JavaToPdf.PATH + "/target/HelloWorld_CN_HTML_FREEMARKER_FS_IMG.png";
     private static final String HTML = "template_freemarker_fs.html";
     private static final String FONT = JavaToPdf.TEMPLATE_PATH +"simhei.ttf";
-    private static final String LOGO_PATH = "file://"+JavaToPdf.TEMPLATE_PATH+"logo.png";
+    private static final String LOGO_PATH = "file:///"+JavaToPdf.TEMPLATE_PATH+"logo.png";
     private static final String IMG_EXT = "png";
   
     private static Configuration freemarkerCfg = null;
@@ -36,16 +30,16 @@ public class JavaToPdfImgHtmlFreeMarker {
         freemarkerCfg =new Configuration();
         //freemarker的模板目录
         try {
-            freemarkerCfg.setDirectoryForTemplateLoading(new File(JavaToPdf.PATH));
+            freemarkerCfg.setDirectoryForTemplateLoading(new File(JavaToPdf.TEMPLATE_PATH));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
   
   
-     /*public static void main(String[] args) throws IOException, DocumentException, com.lowagie.text.DocumentException {
+     public static void main(String[] args) throws IOException, DocumentException, com.lowagie.text.DocumentException {
         Map<String,Object> data = new HashMap();
-        data.put("name","鲁家宁");
+        data.put("name","临时卡点附件");
   
         String content = JavaToPdfImgHtmlFreeMarker.freeMarkerRender(data,HTML);
         ByteArrayOutputStream pdfStream = JavaToPdfImgHtmlFreeMarker.createPdf(content);
@@ -55,7 +49,7 @@ public class JavaToPdfImgHtmlFreeMarker {
         fileStream.write(imgSteam.toByteArray());
         fileStream.close();
   
-    }*/
+    }
   
   
     /**
@@ -124,7 +118,7 @@ public class JavaToPdfImgHtmlFreeMarker {
      * @param scaling 清晰度
      * @param pageNum 页数
      */
-     /*public static ByteArrayOutputStream pdfToImg(byte[] bytes, float scaling, int pageNum,String formatName) {
+     public static ByteArrayOutputStream pdfToImg(byte[] bytes, float scaling, int pageNum,String formatName) {
         //推荐的方法打开PdfDecoder
         PdfDecoder pdfDecoder = new PdfDecoder(true);
         FontMappings.setFontReplacements();
@@ -138,12 +132,12 @@ public class JavaToPdfImgHtmlFreeMarker {
             BufferedImage img = pdfDecoder.getPageAsImage(pageNum);
   
             ImageIO.write(img, formatName, out);
-        } catch (PdfException e) {
+        }  catch (IOException e) {
             e.printStackTrace();
-        } catch (IOException e){
+        } catch (org.jpedal.exception.PdfException e) {
             e.printStackTrace();
         }
-  
-        return out;
-    }*/
+
+         return out;
+    }
 }
