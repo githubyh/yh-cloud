@@ -4,6 +4,7 @@ import com.google.common.base.CaseFormat;
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Joiner;
 import com.google.common.base.Splitter;
+import org.junit.Test;
 
 import java.util.Arrays;
 
@@ -26,7 +27,8 @@ public class StringTest {
 //        tester.testCaseFormat();
     }
 
-    private void testJoiner(){
+    @Test
+    public void testJoiner(){
         System.out.println(Joiner.on(",")
                 .skipNulls()
                 .join(Arrays.asList(1,2,3,4,5,null,6)));

@@ -17,15 +17,15 @@
         <module>yh-metrics</module>
         <module>yh-pinpoint</module>
         <module>yh-guava</module>
-        <module>yh-hbase</module>
         <module>yh-mq</module>
-        <module>yh-dubbo</module>
         <module>yh-springcloud</module>
         <module>yh-db</module>
         <module>yh-rpc</module>
         <module>yh-oauth</module>
         <module>yh-search</module>
         <module>yh-easypoi</module>
+        <module>yh-registry</module>
+        <module>yh-scheduler</module>
     </modules>
 
 
@@ -50,6 +50,16 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>log4j-over-slf4j</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>log4j</groupId>
+                    <artifactId>log4j</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>

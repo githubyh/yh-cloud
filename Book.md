@@ -17,6 +17,10 @@ https://mp.weixin.qq.com/s/IikOABCxvZQwDmsVrcpbgA
 ms通关宝典：http://mp.weixin.qq.com/s/mEjox_snApxbxwSGklpkxQ
 
 
+
+设计模式：https://mp.weixin.qq.com/s?__biz=MzI4Njc5NjM1NQ==&mid=2247484584&idx=1&sn=c2412a40f2f55468eb1d75d2b8a0c6f9&chksm=ebd63b84dca1b2928451413ce0f3b4a0c77dc70b62f308bdd01217f9c302e674072efe905600&scene=21#wechat_redirect
+
+
 一叶知秋：https://muyinchen.github.io/
 Hoseejava源码：https://my.oschina.net/hosee/blog?sort=hot&temp=1519892135397
 书海陶然同步异步讲解：https://www.jianshu.com/p/aed6067eeac9
