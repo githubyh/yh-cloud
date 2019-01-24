@@ -22,6 +22,10 @@ npm run start
 
 
 集群：https://www.cnblogs.com/bixiaoyu/p/9460554.html
+
 调优
 https://blog.csdn.net/wfs1994/article/details/80836570
+
 https://www.cnblogs.com/bixiaoyu/p/9460554.html
+
+http://www.cnblogs.com/hseagle/p/6015245.html
