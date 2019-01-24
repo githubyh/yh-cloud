@@ -65,3 +65,6 @@ vim /etc/security/limits.d/90-nproc.conf
 * soft nproc 4096
 * hard nproc 4096
 * root soft nproc unlimited
+
+
+异常解决：https://blog.csdn.net/gebitan505/article/details/54709515
