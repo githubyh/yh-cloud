@@ -31,6 +31,21 @@ https://www.cnblogs.com/bixiaoyu/p/9460554.html
 http://www.cnblogs.com/hseagle/p/6015245.html
 
 
+创建elsearch用户组及elsearch用户
+
+groupadd elsearch
+useradd elsearch -g elsearch -p elasticsearch
+更改elasticsearch文件夹及内部文件的所属用户及组为elsearch:elsearch
+
+cd /opt
+chown -R elsearch:elsearch  elasticsearch
+切换到elsearch用户再启动
+
+su elsearch cd elasticsearch/bin
+./elasticsearch
+
+
+
 #切换到root用户
 vim /etc/security/limits.conf 添加
 appdeploy hard nofile 65536
