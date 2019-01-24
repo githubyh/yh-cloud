@@ -30,6 +30,8 @@ https://www.cnblogs.com/bixiaoyu/p/9460554.html
 
 http://www.cnblogs.com/hseagle/p/6015245.html
 
+https://blog.csdn.net/u010781176/article/details/79489151
+
 
 创建elsearch用户组及elsearch用户
 
