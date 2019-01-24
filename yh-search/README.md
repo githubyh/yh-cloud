@@ -29,3 +29,22 @@ https://blog.csdn.net/wfs1994/article/details/80836570
 https://www.cnblogs.com/bixiaoyu/p/9460554.html
 
 http://www.cnblogs.com/hseagle/p/6015245.html
+
+
+#切换到root用户
+vim /etc/security/limits.conf 添加
+appdeploy hard nofile 65536
+appdeploy soft nofile 65536
+soft nproc 5000
+hard nproc 5000
+root soft nproc 5000
+root hard nproc 5000
+soft nofile 65535
+hard nofile 65535
+vim /etc/sysctl.conf 添加
+vm.max_map_count = 655360
+保存后执行 sysctl -p
+vim /etc/security/limits.d/90-nproc.conf
+* soft nproc 4096
+* hard nproc 4096
+* root soft nproc unlimited
