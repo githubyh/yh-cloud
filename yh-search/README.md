@@ -70,3 +70,45 @@ vim /etc/security/limits.d/90-nproc.conf
 异常解决：https://blog.csdn.net/gebitan505/article/details/54709515
 http://www.cnblogs.com/jstarseven/p/6803054.html
 重启问题：https://www.jianshu.com/p/9752709bfea4
+
+
+
+
+
+配置：
+
+cluster.name: es-cluster-5.3.1   配置集群名称  服务器保持一致
+
+node.name: node-1                 配置单一节点名称，每个节点唯一标识
+
+path.data: /data/to/data # es数据存储的目录
+
+path.logs: /data/to/logs # es日志存储的地方
+
+network.host: 0.0.0.0              设置绑定的ip地址
+
+network.bing_host: 0.0.0.0              设置绑定的ip地址
+
+http.port: 9200                      端口
+
+discovery.zen.ping.unicast.hosts: ["172.16.31.220", "172.16.31.221","172.16.31.224"]   集群节点ip或者主机
+
+discovery.zen.ping.timeout: 10s
+设置集群中自动发现其它节点时ping连接超时时间，默认为3秒，对于比较差的网络环境可以高点的值来防止自动发现时出错。
+
+# 通过配置大多数节点(节点总数/ 2 + 1)来防止脑裂，设置这个参数来保证集群中的节点可以知道其它N个有master资格的节点。默认为1，对于大的集群来说，可以设置大一点的值（2-4）
+#
+discovery.zen.minimum_master_nodes: 2
+
+# 在一个完整的集群重新启动到N个节点开始之前，阻止初始恢复
+#
+gateway.recover_after_nodes: 3
+
+bootstrap.system_call_filter: false
+
+
+下面两行配置为haad插件配置，三台服务器一致。
+
+http.cors.enabled: true
+
+http.cors.allow-origin: "*"
