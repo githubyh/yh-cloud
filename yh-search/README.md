@@ -68,3 +68,4 @@ vim /etc/security/limits.d/90-nproc.conf
 
 
 异常解决：https://blog.csdn.net/gebitan505/article/details/54709515
+http://www.cnblogs.com/jstarseven/p/6803054.html
