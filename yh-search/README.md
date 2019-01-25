@@ -94,14 +94,18 @@ http.port: 9200                      端口
 discovery.zen.ping.unicast.hosts: ["172.16.31.220", "172.16.31.221","172.16.31.224"]   集群节点ip或者主机
 
 设置集群中自动发现其它节点时ping连接超时时间，默认为3秒，对于比较差的网络环境可以高点的值来防止自动发现时出错。
+
 discovery.zen.ping.timeout: 10s
 
 
+
 通过配置大多数节点(节点总数/ 2 + 1)来防止脑裂，设置这个参数来保证集群中的节点可以知道其它N个有master资格的节点。默认为1，对于大的集群来说，可以设置大一点的值（2-4）
+
 discovery.zen.minimum_master_nodes: 2
 
 在一个完整的集群重新启动到N个节点开始之前，阻止初始恢复
-gateway.recover_after_nodes: 3
+
+gateway.recover_after_nodes: 1
 
 bootstrap.system_call_filter: false
 
