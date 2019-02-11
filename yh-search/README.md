@@ -33,6 +33,15 @@ http://www.cnblogs.com/hseagle/p/6015245.html
 https://blog.csdn.net/u010781176/article/details/79489151
 
 
+jdk
+vi elasticsearch
+
+if [ -x "JAVA_HOME/bin/java" ]; then
+  JAVA="$JAVA_HOME/bin/java"
+else
+  JAVA=`which java`
+  
+
 创建elsearch用户组及elsearch用户
 
 groupadd elsearch
@@ -114,3 +123,7 @@ bootstrap.system_call_filter: false
 http.cors.enabled: true
 
 http.cors.allow-origin: "*"
+
+
+
+
