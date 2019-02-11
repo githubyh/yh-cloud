@@ -36,6 +36,7 @@ https://blog.csdn.net/u010781176/article/details/79489151
 jdk
 vi elasticsearch
 
+JAVA_HOME=/usr/jdk8
 if [ -x "JAVA_HOME/bin/java" ]; then
   JAVA="$JAVA_HOME/bin/java"
 else
