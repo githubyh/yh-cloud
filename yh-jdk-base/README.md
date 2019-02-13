@@ -24,9 +24,12 @@ get方法是弱一致的，是什么含义？可能你期望往ConcurrentHashMap
 
 
 深入理解同步异步，阻塞非阻塞 https://www.jianshu.com/p/2116fff869b6
+http://www.jasongj.com/java/nio_reactor/  比较好的
+
 聊聊同步、异步、阻塞与非阻塞：https://my.oschina.net/xianggao/blog/661085
 书海陶然同步异步讲解：https://www.jianshu.com/p/aed6067eeac9
 https://gitee.com/taomk
+
 
 Linux 五种IO模型：https://www.jianshu.com/p/486b0965c296
 同步异步
