@@ -157,3 +157,43 @@ https://blog.csdn.net/zhou_shaowei/article/details/83995754 6.2.4
 来源：CSDN 
 原文：https://blog.csdn.net/zhou_shaowei/article/details/83995754 
 版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+https://artifacts.elastic.co/maven/org/elasticsearch/client/x-pack-transport/6.2.4/x-pack-transport-6.2.4.jar
+
+<repositories>
+<!-- add the elasticsearch repo -->
+<repository>
+<id>elasticsearch-releases</id>
+<url>https://artifacts.elastic.co/maven</url>
+<releases>
+<enabled>true</enabled>
+</releases>
+<snapshots>
+<enabled>false</enabled>
+</snapshots>
+</repository>
+</repositories>
+
+
+
+
+<repositories>
+	<!&ndash; add the elasticsearch repo &ndash;> 
+	<repository> 
+		<id>elasticsearch-releases</id> 
+		<url>https://artifacts.elastic.co/maven</url> 
+		<releases>
+			<enabled>true</enabled> 
+		</releases> 
+		<snapshots> 
+			<enabled>false</enabled>
+		</snapshots>
+	</repository>
+</repositories>
+
+<dependency>
+	<groupId>org.elasticsearch.client</groupId>
+	<artifactId>x-pack-transport</artifactId>
+	<version>${elasticsearchVersion}</version>
+</dependency>
