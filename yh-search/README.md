@@ -133,3 +133,26 @@ https://elasticsearch.cn/question/1609#!answer_form
 https://blog.csdn.net/lvyuan1234/article/details/78185763
 
 https://blog.csdn.net/zhou_shaowei/article/details/83995754 6.2.4
+
+ <dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>x-pack-transport</artifactId>
+			<version>6.2.3</version>
+		</dependency>
+ 
+ 		<dependency>
+			<groupId>org.elasticsearch.client</groupId>
+			<artifactId>x-pack-core</artifactId>
+			<version>6.2.3</version>
+		</dependency> 
+ 
+		<dependency>
+			<groupId>com.unboundid</groupId>
+			<artifactId>unboundid-ldapsdk</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+--------------------- 
+作者：稻草一根 
+来源：CSDN 
+原文：https://blog.csdn.net/zhou_shaowei/article/details/83995754 
+版权声明：本文为博主原创文章，转载请附上博文链接！
