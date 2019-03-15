@@ -134,7 +134,8 @@ https://blog.csdn.net/lvyuan1234/article/details/78185763
 
 https://blog.csdn.net/zhou_shaowei/article/details/83995754 6.2.4
 
- <dependency>
+ 
+ 		<dependency>
 			<groupId>org.elasticsearch.client</groupId>
 			<artifactId>x-pack-transport</artifactId>
 			<version>6.2.3</version>
