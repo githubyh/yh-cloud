@@ -127,5 +127,6 @@ http.cors.allow-origin: "*"
 
 
 
-x-pack
+x-pack:
 https://elasticsearch.cn/question/1609#!answer_form
+https://blog.csdn.net/lvyuan1234/article/details/78185763
