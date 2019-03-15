@@ -129,4 +129,7 @@ http.cors.allow-origin: "*"
 
 x-pack:
 https://elasticsearch.cn/question/1609#!answer_form
+
 https://blog.csdn.net/lvyuan1234/article/details/78185763
+
+https://blog.csdn.net/zhou_shaowei/article/details/83995754 6.2.4
