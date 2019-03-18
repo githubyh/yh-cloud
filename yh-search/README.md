@@ -128,6 +128,7 @@ http.cors.allow-origin: "*"
 
 
 x-pack:
+https://blog.csdn.net/qq_36666651/article/details/83539103  certs/elastic-certificates.p12
 https://elasticsearch.cn/question/1609#!answer_form
 
 https://blog.csdn.net/lvyuan1234/article/details/78185763
