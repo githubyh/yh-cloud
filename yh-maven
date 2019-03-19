@@ -1,17 +1,13 @@
 java -jar myTest.jar --spring.profiles.active=test
 spring.profiles.active=test 指定配置文件（main\test方法）
 
+spring.profiles.active=@env@
+
 -Dmaven.test.skip=true 为测试打包和测试编译,-P后面接的是所需要打包环境的id,如dev开发环境，test测试环境，如果不写-P，默认为dev即开发环境
+<filters>
+	<filter>src/main/resources/${env}/application.properties</filter>
+</filters>
 <resources>
-            <resource>
-                <directory>src/main/resources/${env}</directory>
-                <excludes>
-                    <exclude>dev/*</exclude>
-                    <exclude>test/*</exclude>
-                    <exclude>prod/*</exclude>
-                </excludes>
-                <filtering>true</filtering>
-            </resource>
             <resource>
                 <directory>src/main/resources</directory>
                 <excludes>
@@ -19,8 +15,37 @@ spring.profiles.active=test 指定配置文件（main\test方法）
                     <exclude>test/*</exclude>
                     <exclude>prod/*</exclude>
                 </excludes>
+                <filtering>true</filtering>
             </resource>
 </resources>
+<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<configuration>
+						<encoding>utf-8</encoding>
+						<useDefaultDelimiters>true</useDefaultDelimiters>
+					</configuration>
+				</plugin>
+			</plugins>
+</pluginManagement>
+<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>  
+					<artifactId>maven-jar-plugin</artifactId> 
+				</plugin>
+				
+          			<plugin>	 
+    					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+				</plugin>
+          			<plugin>	 
+    					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+</plugins>
+		
+		
 <profiles>
         <profile>
             <id>dev</id>
