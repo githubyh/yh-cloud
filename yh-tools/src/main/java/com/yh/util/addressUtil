@@ -1,4 +1,9 @@
 public class AddressResolutionUtil {
+
+   static Map map =new HashMap();
+   static{
+   	map.put("长沙市","湖南省");
+   }
 	
 	/**
      * 解析地址
@@ -7,8 +12,20 @@ public class AddressResolutionUtil {
      * @return
      */
     public static List<Map<String,String>> addressResolution(String address){
-        String regex="(?<province>[^省]+自治区|.*?省|.*?行政区|.*?市)(?<city>[^市]+自治州|.*?地区|.*?行政单位|.+盟|市辖区|.*?市|.*?县)(?<county>[^县]+县|.+区|.+市|.+旗|.+海域|.+岛)?(?<town>[^区]+区|.+镇)?(?<village>.*)";
-        Matcher m=Pattern.compile(regex).matcher(address);
+        String regex="(?<province>[^省]+自治区|.*?省|.*?行政区|.*?市|上海|天津|北京|重庆)(?<city>[^市]+自治州|.*?地区|.*?行政单位|.+盟|市辖区|.*?市|.*?县)(?<county>[^县]+县|.+区|.+市|.+旗|.+海域|.+岛)?(?<town>[^区]+区|.+镇)?(?<village>.*)";
+        if(address.startWith("广西") && !address.startWith("广西省")){
+		 address = "广西壮族自治区" + address.substring(2);
+	}else if (address.startWith("内蒙古") && !address.startWith("内蒙古自治区")){
+		address = "内蒙古自治区" + address.substring(3);
+	}
+	
+	for(Map.Entry<String,String> entry:map.entrySet()){
+		if(address.startWith(entry.getKey())){
+			address = entry.getValue()+address ;
+		}
+	}
+	
+	Matcher m=Pattern.compile(regex).matcher(address);
         String province=null,city=null,county=null,town=null,village=null;
         List<Map<String,String>> table=new ArrayList<Map<String,String>>();
         Map<String,String> row=null;
